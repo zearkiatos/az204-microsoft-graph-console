@@ -16,6 +16,7 @@ namespace MicrosoftGraphConsole
 
         public static async Task Main(string[] args)
         {
+            Console.WriteLine($"clientId: {clientId}, tenantId: {tenantId}, userId: {userId}, clientSecret: {clientSecret}");
             var app = ConfidentialClientApplicationBuilder.Create(clientId)
                 .WithClientSecret(clientSecret)
                 .WithAuthority(new Uri($"https://login.microsoftonline.com/{tenantId}"))
